@@ -47,14 +47,7 @@ export default function DashboardPage() {
         if (!supabase || !user) return;
         fetchBlogs()
     }, [supabase, user])
-    const testCron = async () => {
-        await fetch("/api/cron", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-        })
-    }
+
 
     return (
         <div className="bg-[#050505] min-h-screen w-full items-center justify-centerrelative">
