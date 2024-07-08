@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { v4 as uuidv4 } from "uuid"
 
 export const runtime = "edge"
+export const maxDuration = 60;
 
 export async function GET(req) {
     const response = await update()
