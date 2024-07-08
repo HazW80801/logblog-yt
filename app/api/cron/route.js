@@ -6,7 +6,9 @@ export const runtime = "edge"
 
 export async function GET(req) {
     const response = await update()
-    return NextResponse.json({ response }, { status: 200 })
+    return new NextResponse(JSON.stringify(response), {
+        status: 200,
+    })
 }
 
 async function update() {
@@ -86,8 +88,8 @@ async function update() {
             await supabase.from("blog_posts").update({ "content": result })
                 .eq("post_id", blogPostId).select()
         }
-        await createPostTitle()
-        await generatePost()
+        await createPostTitle();
+        await generatePost();
     }
     return { message: "success" }
 }
