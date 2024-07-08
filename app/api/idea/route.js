@@ -5,7 +5,6 @@ import { ReplicateStream, StreamingTextResponse } from 'ai';
 
 const replicate = new Replicate({
     auth: process.env.REPLICATE_KEY
-    // auth: `r8_5xgZ26cPLlengfCsb8eZgtIYyQqIgAY1BTCwB`
 });
 
 export async function POST(req) {

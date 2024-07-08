@@ -55,8 +55,8 @@ export default function DashboardPage() {
             <Header />
             {/* body */}
             <div className="w-full items-end justify-center flex flex-col p-6">
-                <Dialog className="bg-black text-white" open={openDialog}>
-                    <DialogTrigger className="button" onClick={() => setOpenDialog(true)}>
+                <Dialog className="bg-black text-white " open={openDialog}>
+                    <DialogTrigger className="button mt-12" onClick={() => setOpenDialog(true)}>
                         create blog
                     </DialogTrigger>
                     <DialogContent className="bg-[#080808] text-white border border-white/10 "
