@@ -23,7 +23,7 @@ async function update() {
             let payload = {
                 business_desc: blog_description
             }
-            const response = await fetch("http://localhost:3000/api/idea", {
+            const response = await fetch("https://logblog-yt.vercel.app/api/idea", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -60,7 +60,7 @@ async function update() {
                 title: generatedTitle,
                 business_description: blog_description
             }
-            const response = await fetch("http://localhost:3000/api/generate", {
+            const response = await fetch("https://logblog-yt.vercel.app/api/generate", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
